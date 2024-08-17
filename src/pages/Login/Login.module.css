@@ -48,3 +48,8 @@ input {
     letter-spacing: -0.408px;
     color: #212121;
 }
+
+
+.error {
+    color: red;
+}

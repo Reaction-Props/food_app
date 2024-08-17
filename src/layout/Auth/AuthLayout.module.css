@@ -12,7 +12,7 @@
 
 
 .content {
-    flex: 1;
+    flex: 2;
     border-left: rgba(212, 214, 224, 1) 1px solid;
     display: flex;
     align-items: center;
