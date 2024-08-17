@@ -5,6 +5,7 @@ import styles from "./Login.module.css";
 import {FormEvent, useState} from "react";
 import axios, {AxiosError} from "axios";
 import {PREFIX} from "../../helpers/API.ts";
+import {LoginResponse} from "../../components/interfaces/auth.interface.ts";
 
 
 export type LoginForm = {
@@ -31,8 +32,9 @@ export const Login = () => {
 
     const sendLogin = async (email: string, password: string) => {
         try {
-            const {data} = await axios.post(`${PREFIX}/auth/login`, {email, password})
+            const {data} = await axios.post<LoginResponse>(`${PREFIX}/auth/login`, {email, password})
             console.log(data)
+            localStorage.setItem('jwt', data.access_token)
         }
         catch (e) {
             if (e instanceof AxiosError) {

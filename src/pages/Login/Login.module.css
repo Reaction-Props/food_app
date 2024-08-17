@@ -51,5 +51,8 @@ input {
 
 
 .error {
-    color: red;
+    background: #e66d13;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
 }
