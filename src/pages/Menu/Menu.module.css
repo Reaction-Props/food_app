@@ -1,0 +1,31 @@
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+
+
+.no-results {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.line-spinner {
+    width: 40px; /* Breite der Linie */
+    height: 6px; /* Höhe der Linie */
+    background-color: #3498db; /* Blaue Linie */
+    animation: spin-line 1s linear infinite; /* Animations-Eigenschaften */
+    align-items: center;
+    margin: 0 auto;
+}
+
+@keyframes spin-line {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+

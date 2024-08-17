@@ -1,0 +1,23 @@
+.input {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    color: var(--text-color);
+    border: 1px solid #EEE;
+    box-shadow: 15px 20px 45px 0px rgba(233, 233, 233, 0.25);
+    border-radius: 10px;
+    padding: 16px 20px;
+    min-width: 256px;
+}
+
+
+.input-wrapper {
+    position: relative;
+}
+
+.loop {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}

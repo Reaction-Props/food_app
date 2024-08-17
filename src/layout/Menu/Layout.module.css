@@ -1,0 +1,73 @@
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+.sidebar {
+    padding: 30px;
+    border-right: 1px solid var(--separator-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.power {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 30px;
+    align-items: start;
+}
+
+.link {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.link:hover {
+    color: var(--primary-color);
+}
+
+.link.active {
+    color: var(--primary-color);
+}
+
+
+.user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.name {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.email {
+    font-size: 14px;
+}
+
+
+.content {
+    padding: 40px 60px;
+    width: 100%;
+}
+
+
+
+
+
+
