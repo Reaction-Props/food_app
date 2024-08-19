@@ -1,17 +1,17 @@
 import styles from "./Layout.module.css";
 import {Button} from "../../components/Button/Button.tsx";
-import {useEffect} from "react";
-import {NavLink, Outlet} from "react-router-dom";
-import {useLocation} from "react-router-dom";
+import {NavLink, Outlet, useNavigate} from "react-router-dom";
 
 
 export const Layout = () => {
 
-    const location = useLocation();
+    const navigator = useNavigate()
 
-    useEffect(() => {
-        console.log(location)
-    }, [location]);
+    const logout = () => {
+        localStorage.removeItem('jwt')
+        navigator('/auth/login')
+    }
+
     return (
         <div className={styles['layout']}>
             <div className={styles['sidebar']}>
@@ -28,7 +28,7 @@ export const Layout = () => {
                         <img src="/cart-icon.svg" alt="cart"/>
                         Cart</NavLink>
                 </div>
-                <Button className={styles['power']}>
+                <Button className={styles['power']} onClick={logout}>
                     <img src="/power.svg" alt="power"/> Logout
                 </Button>
             </div>
